@@ -5,12 +5,15 @@ enum AppThemen {
   dark,
 }
 
-class ThemenState {
+class ThemenState extends Equatable {
   final AppThemen appThemen;
-
   ThemenState({
     this.appThemen = AppThemen.light,
   });
+
+  factory ThemenState.initial() {
+    return ThemenState();
+  }
 
   @override
   List<Object> get props => [AppThemen];
@@ -26,5 +29,5 @@ class ThemenState {
     );
   }
 
-  static ThemenState initial() {}
+  //static ThemenState initial() {}
 }
