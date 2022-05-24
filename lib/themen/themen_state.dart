@@ -25,4 +25,6 @@ class ThemenState {
       appThemen: appThemen ?? this.appThemen,
     );
   }
+
+  static ThemenState initial() {}
 }
